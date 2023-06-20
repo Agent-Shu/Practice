@@ -28,11 +28,11 @@ vfs = uos.VfsFat(sd)
 uos.mount(vfs, "/sd")
 
 SSID = "D-Link_DIR-615"
-PASSWORD = "shubhojit"
-TOKEN = "BBFF-VAaL6FRc12iRxRWaBFEWI7Su9xKEG7"
+PASSWORD = ""
+TOKEN = ""
 DEVICE_LABEL="pipico"
 #VARIABLE_LABEL="Minute Data"
-USER_AGENT="randomstring@12345"
+USER_AGENT=""
 
 total_power=0.00
 hour_power=0.00
