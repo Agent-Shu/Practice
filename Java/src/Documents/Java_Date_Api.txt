@@ -1,0 +1,174 @@
+Java LocalDate class
+
+Java LocalDate class is an immutable class that represents Date with a default format of yyyy-MM-dd. It inherits Object class and implements the ChronoLocalDate interface
+
+Prog1
+-----------
+
+Java LocalDate Example
+
+import java.time.LocalDate;  
+public class LocalDateExample {  
+  public static void main(String[] args) {  
+    LocalDate date = LocalDate.now();  
+    LocalDate yesterday = date.minusDays(1);  
+    LocalDate tomorrow = yesterday.plusDays(2);  
+    System.out.println("Today date: "+date);  
+    System.out.println("Yesterday date: "+yesterday);  
+    System.out.println("Tommorow date: "+tomorrow);  
+  }  
+}  
+
+
+
+
+Prog2
+-----------
+
+
+Java LocalDate Example: isLeapYear()
+
+import java.time.LocalDate;  
+public class LocalDateExample {  
+  public static void main(String[] args) {  
+    LocalDate date1 = LocalDate.of(2017, 1, 13);  
+    System.out.println(date1.isLeapYear());  
+    LocalDate date2 = LocalDate.of(2016, 9, 23);  
+    System.out.println(date2.isLeapYear());  
+  }  
+}  
+
+Prog3
+-----------
+
+Java LocalDate Example: atTime()
+
+import java.time.*;  
+public class LocalDateExample {  
+  public static void main(String[] args) {  
+    LocalDate date = LocalDate.of(2017, 1, 13);  
+    LocalDateTime datetime = date.atTime(1,50,9);      
+    System.out.println(datetime);   
+  }  
+}  
+
+Prog4
+-----------
+
+Java LocalTime Example: now()
+
+import java.time.LocalTime;  
+public class LocalTimeExample {  
+  public static void main(String[] args) {  
+    LocalTime time = LocalTime.now();  
+    System.out.printl(time);  
+  }  
+}  
+
+Prog5
+-----------
+
+Java LocalTime Example: of()
+
+import java.time.LocalTime;  
+public class LocalDateExample {  
+  public static void main(String[] args) {  
+    LocalTime time = LocalTime.of(10,43,12);  
+    System.out.println(time);  
+  }  
+}  
+
+Prog6
+-----------
+
+
+Java LocalTime Example: minusHours() and minusMinutes()
+
+import java.time.LocalTime;  
+public class LocalDateExample {  
+  public static void main(String[] args) {  
+    LocalTime time1 = LocalTime.of(10,43,12);  
+    System.out.println(time1);  
+    LocalTime time2=time1.minusHours(2);  
+    LocalTime time3=time2.minusMinutes(34);  
+    System.out.println(time3);  
+  }  
+}
+
+
+Prog7
+-----------
+
+Java LocalTime Example: plusHours() and plusMinutes()
+
+import java.time.LocalTime;  
+public class LocalTimeExample {  
+  public static void main(String[] args) {  
+    LocalTime time1 = LocalTime.of(10,43,12);  
+    System.out.println(time1);  
+    LocalTime time2=time1.plusHours(4);  
+    LocalTime time3=time2.plusMinutes(18);  
+    System.out.println(time3);  
+  }  
+}  
+
+
+Prog8
+-----------
+
+Java LocalTime Example
+
+import java.time.*;  
+import java.time.temporal.ChronoUnit;  
+public class LocalTimeExample {  
+  public static void main(String... args) {  
+    ZoneId zone1 = ZoneId.of("Asia/Kolkata");  
+    ZoneId zone2 = ZoneId.of("Asia/Tokyo");  
+    LocalTime time1 = LocalTime.now(zone1);  
+    System.out.println("India Time Zone: "+time1);  
+    LocalTime time2 = LocalTime.now(zone2);  
+    System.out.println("Japan Time Zone: "+time2);  
+    long hours = ChronoUnit.HOURS.between(time1, time2);  
+    System.out.println("Hours between two Time Zone: "+hours);  
+    long minutes = ChronoUnit.MINUTES.between(time1, time2);  
+    System.out.println("Minutes between two time zone: "+minutes);  
+  }  
+}  
+
+
+Prog9
+-----------
+
+
+Java LocalDateTime Example
+
+import java.time.LocalDateTime;  
+import java.time.format.DateTimeFormatter;  
+public class LocalDateTimeExample {  
+    public static void main(String[] args) {  
+        LocalDateTime now = LocalDateTime.now();  
+        System.out.println("Before Formatting: " + now);  
+        DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");  
+        String formatDateTime = now.format(format);  
+        System.out.println("After Formatting: " + formatDateTime);  
+    }  
+}  
+
+Prog10
+-----------
+
+Java LocalDateTime Example: now()
+
+import java.time.LocalDateTime;  
+import java.time.format.DateTimeFormatter;  
+public class LocalDateTimeExample {  
+  public static void main(String[] args) {  
+    LocalDateTime datetime1 = LocalDateTime.now();  
+    DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm:ss");  
+    String formatDateTime = datetime1.format(format);   
+    System.out.println(formatDateTime);    
+  }  
+}  
+
+
+
