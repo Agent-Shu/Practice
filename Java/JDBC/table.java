@@ -1,3 +1,5 @@
+package jdbc_mysql.src;
+
 import java.util.*;
 import java.sql.*;
 
@@ -12,24 +14,24 @@ public class table{
 	     	int code;
 	     	double mrks;    	
 	
-            Class.forName("com.mysql.jdbc.Driver");  
-            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/school","root","");  	    
+            //Class.forName("com.mysql.cj.jdbc.Driver");  
+            con= DriverManager.getConnection("jdbc:mysql://localhost:3306/school","root","");  	    
 	     	
 	     	System.out.print("Enter id :");
 	     	code=sc.nextInt();
-	     	c=sc.nextLine();
+	     	//c=sc.nextLine();
 	     	System.out.print("Enter name :");
 	     	nam=sc.nextLine();	
-	     	c=sc.nextLine();
+	     	//c=sc.nextLine();
 	     	System.out.print("Enter marks :");
 	     	mrks=sc.nextDouble();
-	     	c=sc.nextLine();
+	     	//c=sc.nextLine();
 	     	stmt=con.createStatement();
+
 	     	sql="insert into student values("+code+",'"+nam+"',"+mrks+")";
 	     	stmt.executeUpdate(sql);
-	     	
-	     	sc.close();
-	     	System.out.println("Record Inserted");		     	
+	     	System.out.println("Record Inserted");
+			sc.close();		     	
 		}	
 		catch(Exception ex) {
 			System.out.println(ex.getMessage());
@@ -37,8 +39,8 @@ public class table{
 	}
 }
 
-//	create database debalena;
-//	use debalena;
+//	create database school;
+//	use school;
 
 //	create table Student
 //	(

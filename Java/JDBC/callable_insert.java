@@ -1,3 +1,5 @@
+package jdbc_mysql.src;
+
 import java.util.*;
 import java.sql.*;
 
@@ -51,4 +53,3 @@ public class callable_insert{
 //	BEGIN
 // 	   insert into student(id,name,marks) values(code,nam,mrks);
 //	END //
-//	DELIMITER ;

@@ -1,3 +1,5 @@
+package jdbc_mysql.src;
+
 import java.sql.*;
 
 public class fetch {

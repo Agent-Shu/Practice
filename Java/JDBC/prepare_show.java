@@ -1,3 +1,5 @@
+package jdbc_mysql.src;
+
 import java.util.*;
 import java.sql.*;
 
@@ -14,7 +16,7 @@ public class prepare_show {
 	     		     	
 	     	
             Class.forName("com.mysql.jdbc.Driver");  	      
-            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/shubhojit","root","");   
+            con=DriverManager.getConnection("jdbc:mysql://localhost:3306/school","root","");   
 	    
 		    System.out.print("\nEnter Id: ");
 		    code=sc.nextInt();
